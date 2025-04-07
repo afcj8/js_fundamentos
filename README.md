@@ -1,2 +1,3 @@
-# js_fundamentos
-Este repositório é destinado ao aprendizado dos fundamentos da linguagem de programação JavaScript.
+# Introdução
+
+JavaScript é uma linguagem de programação amplamente utilizada para criar interatividade em páginas web. Ele permite manipular elementos da interface, responder a ações do usuário e se comunicar com servidores. Funciona principalmente no navegador, mas também pode ser usado no back-end com plataformas como Node.js. Sua sintaxe é simples e flexível, o que o torna uma das linguagens mais populares no desenvolvimento web.
