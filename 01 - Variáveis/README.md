@@ -38,3 +38,15 @@ const linguagem = "JavaScript";
 const pessoa = { nome: "João" };
 pessoa.nome = "Maria"; // Isso é permitido
 ```
+
+Por fim, é importante lembrar que JavaScript é uma linguagem case-sensitive, o que significa que diferencia letras maiúsculas de minúsculas. Assim, variáveis chamadas `nome`, `Nome` e `NOME` são distintas entre si. Além disso, por utilizar o conjunto de caracteres Unicode, é possível usar acentos e até caracteres de outros idiomas ou alfabetos nos nomes de variáveis, como no caso da palavra `Früh`, que significa “cedo” em alemão:
+
+```
+let Früh = "Bom dia";
+let fruh = "Boa tarde";
+
+console.log(Früh); // Bom dia
+console.log(fruh); // Boa tarde
+```
+
+Essa flexibilidade amplia a expressividade do código, mas requer atenção para evitar erros causados por nomes semelhantes.
