@@ -21,3 +21,11 @@ O tipo `number` representa números inteiros e de ponto flutuante. JavaScript n�
 let idade = 30;
 let altura = 1.75;
 ```
+
+## 2.3. bigint
+
+O `bigint` é um tipo usado para representar números inteiros muito grandes, que ultrapassam o limite do tipo `number`. Ele é declarado adicionando a letra `n` ao final do número.
+
+```
+let numeroGrande = 1234567890123456789012345678901234567890n;
+```
