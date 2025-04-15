@@ -55,3 +55,14 @@ O tipo `null` representa ausência intencional de valor. É usado quando se dese
 ```
 let usuario = null;
 ```
+
+## 2.7. symbol
+
+O `symbol` é um tipo primitivo usado para criar valores únicos e imutáveis, geralmente utilizados como identificadores de propriedades de objetos.
+
+```
+let id = Symbol("id");
+let outroId = Symbol("id");
+
+console.log(id === outroId); // false
+```
