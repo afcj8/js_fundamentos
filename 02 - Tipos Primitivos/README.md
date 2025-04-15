@@ -47,3 +47,11 @@ O `undefined` é atribuído automaticamente a uma variável declarada mas não i
 let x;
 console.log(x); // undefined
 ```
+
+## 2.6. null
+
+O tipo `null` representa ausência intencional de valor. É usado quando se deseja “zerar” uma variável ou indicar que ela está vazia de forma explícita.
+
+```
+let usuario = null;
+```
