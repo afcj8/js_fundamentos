@@ -12,3 +12,12 @@ let saudacao = `Olá, ${nome}!`; // Olá, João!
 ```
 
 A interpolação de variáveis permite inserir o valor de uma variável ou expressão dentro de uma `string`. Para isso, utiliza-se a sintaxe `${...}` dentro de uma `string` com crases. No exemplo acima, `${nome}` é substituído pelo valor da variável `nome`.
+
+## 2.2. number
+
+O tipo `number` representa números inteiros e de ponto flutuante. JavaScript não diferencia entre inteiros e decimais: ambos são do tipo `number`.
+
+```
+let idade = 30;
+let altura = 1.75;
+```
