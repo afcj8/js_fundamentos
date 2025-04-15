@@ -88,3 +88,55 @@ x %= 2; // equivale a x = x % 2
 ```
 x **= 2; // equivale a x = x ** 2
 ```
+
+## 3.3. Operadores de Comparação
+
+Os operadores de comparação comparam dois valores e retornam um resultado booleano: `true` ou `false`. São comumente usados em instruções `if`, `while`, expressões ternárias, etc.
+
+- `==` → igualdade de valor, com conversão de tipo (coerção implícita)
+
+```
+5 == "5" // true
+```
+
+- `===` → igualdade estrita (valor e tipo)
+
+```
+5 === "5" // false
+```
+
+- `!=` → diferença de valor, com conversão de tipo
+
+```
+10 != "10" // false
+```
+
+- `!==` → diferença estrita
+
+```
+10 !== "10" // true
+```
+
+- `>` → maior que
+
+```
+8 > 5 // true
+```
+
+- `<` → menor que
+
+```
+3 < 9 // true
+```
+
+- `>=` → maior ou igual
+
+```
+7 >= 7 // true
+```
+
+- `<=` → menor ou igual
+
+```
+4 <= 5 // true
+```
