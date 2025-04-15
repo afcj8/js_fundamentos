@@ -29,3 +29,12 @@ O `bigint` é um tipo usado para representar números inteiros muito grandes, qu
 ```
 let numeroGrande = 1234567890123456789012345678901234567890n;
 ```
+
+## 2.4. boolean
+
+O tipo `boolean` representa um valor lógico, que pode ser `true` (verdadeiro) ou `false` (falso). É usado em comparações, estruturas condicionais e controle de fluxo.
+
+```
+let aprovado = true;
+let maiorDeIdade = idade >= 18;
+```
