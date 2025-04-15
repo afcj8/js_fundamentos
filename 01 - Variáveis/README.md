@@ -26,3 +26,15 @@ if (true) {
 }
 // console.log(linguagem); // Erro: linguagem is not defined
 ```
+
+## 1.3. const
+
+Também introduzido no ES6, o `const` serve para declarar variáveis cujo valor não pode ser reatribuído. Assim como o `let`, possui escopo de bloco. No entanto, quando `const` é usado para declarar objetos ou arrays, suas propriedades internas ainda podem ser modificadas, desde que a referência original não mude.
+
+```
+const linguagem = "JavaScript";
+// linguagem = "Python"; // Erro: Assignment to constant variable
+
+const pessoa = { nome: "João" };
+pessoa.nome = "Maria"; // Isso é permitido
+```
