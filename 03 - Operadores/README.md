@@ -42,3 +42,49 @@ let resto = 10 % 3; // 1
 ```
 let potencia = 2 ** 3; // 8 (2 elevado à 3ª potência)
 ```
+
+## 3.2. Operadores de Atribuição
+
+Os operadores de atribuição são usados para atribuir valores a variáveis. O mais comum é o sinal de igual (`=`), mas também existem formas encurtadas para aplicar operações aritméticas junto da atribuição.
+
+- `=` → atribuição simples
+
+```
+let x = 10;
+```
+
+- `+=` → soma e atribuição
+
+```
+x += 5; // equivale a x = x + 5
+```
+
+- `-=` → subtração e atribuição
+
+```
+x -= 3; // equivale a x = x - 3
+```
+
+- `*=` → multiplicação e atribuição
+
+```
+x *= 2; // equivale a x = x * 2
+```
+
+- `/=` → divisão e atribuição
+
+```
+x /= 4; // equivale a x = x / 4
+```
+
+- `%=` → módulo e atribuição
+
+```
+x %= 2; // equivale a x = x % 2
+```
+
+- `**=` → exponenciação e atribuição
+
+```
+x **= 2; // equivale a x = x ** 2
+```
