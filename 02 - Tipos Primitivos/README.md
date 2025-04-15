@@ -38,3 +38,12 @@ O tipo `boolean` representa um valor lógico, que pode ser `true` (verdadeiro) o
 let aprovado = true;
 let maiorDeIdade = idade >= 18;
 ```
+
+## 2.5. undefined
+
+O `undefined` é atribuído automaticamente a uma variável declarada mas não inicializada. Também é o valor retornado por funções que não retornam explicitamente nada.
+
+```
+let x;
+console.log(x); // undefined
+```
