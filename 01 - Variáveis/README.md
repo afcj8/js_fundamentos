@@ -14,3 +14,15 @@ function exemploVar() {
   console.log(linguagem); // JavaScript
 }
 ```
+
+## 1.2. let
+
+Com a chegada do ES6, a palavra-chave `let` foi introduzida para permitir declarações com escopo de bloco, ou seja, a variável só existe dentro do par de chaves `{}` onde foi definida. Isso evita comportamentos inesperados, especialmente em estruturas como `for`, `if` e funções anônimas. Diferente do `var`, o `let` não permite que a variável seja redeclarada no mesmo escopo.
+
+```
+if (true) {
+  let linguagem = "JavaScript";
+  console.log(linguagem); // JavaScript
+}
+// console.log(linguagem); // Erro: linguagem is not defined
+```
