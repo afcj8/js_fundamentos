@@ -67,3 +67,20 @@ for (let chave in pessoa) {
 // nome: Ana
 // idade: 30
 ```
+
+## 5.5. for...of
+
+Percorre os valores de objetos iteráveis (arrays, strings, etc.). Ideal para arrays e coleções iteráveis.
+
+```
+const frutas = ["maçã", "banana", "uva"];
+
+for (let fruta of frutas) {
+  console.log(fruta);
+}
+
+// Saída
+// maçã
+// banana
+// uva
+```
