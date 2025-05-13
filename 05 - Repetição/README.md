@@ -84,3 +84,20 @@ for (let fruta of frutas) {
 // banana
 // uva
 ```
+
+## 5.6. forEach
+
+Método de arrays para executar uma função para cada item. Não pode ser interrompido com `break` ou `continue`.
+
+```
+const numeros = [10, 20, 30];
+
+numeros.forEach(function(valor, indice) {
+  console.log(`Índice ${indice}: ${valor}`);
+});
+
+// Saída
+// Índice 0: 10
+// Índice 1: 20
+// Índice 2: 30
+```
