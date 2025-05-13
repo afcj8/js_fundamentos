@@ -18,3 +18,20 @@ for (let i = 0; i < 5; i++) {
 // Valor de i: 3
 // Valor de i: 4
 ```
+
+## 5.2. while
+
+Executa o bloco enquanto a condição for verdadeira. A verificação é feita antes de cada execução.
+
+```
+let i = 0;
+while (i < 3) {
+  console.log("Contando:", i);
+  i++;
+}
+
+// Saída
+// Contando: 0
+// Contando: 1
+// Contando: 2
+```
