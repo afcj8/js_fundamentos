@@ -51,3 +51,19 @@ do {
 // Executando pelo menos uma vez: 0
 // Executando pelo menos uma vez: 1
 ```
+
+## 5.4. for...in
+
+Percorre as propriedades enumeráveis de um objeto. Ideal para objetos, não arrays.
+
+```
+const pessoa = { nome: "Ana", idade: 30 };
+
+for (let chave in pessoa) {
+  console.log(chave + ":", pessoa[chave]);
+}
+
+// Saída
+// nome: Ana
+// idade: 30
+```
