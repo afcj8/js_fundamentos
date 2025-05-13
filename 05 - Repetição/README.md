@@ -35,3 +35,19 @@ while (i < 3) {
 // Contando: 1
 // Contando: 2
 ```
+
+## 5.3. do...while
+
+Semelhante ao `while`, mas executa o bloco pelo menos uma vez, pois a condição é verificada depois da execução.
+
+```
+let i = 0;
+do {
+  console.log("Executando pelo menos uma vez:", i);
+  i++;
+} while (i < 2);
+
+// Saída
+// Executando pelo menos uma vez: 0
+// Executando pelo menos uma vez: 1
+```
