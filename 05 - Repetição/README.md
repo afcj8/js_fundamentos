@@ -4,7 +4,24 @@ As estruturas de repetição (ou laços de repetição) são usadas para executa
 
 ## 5.1. for
 
-Usado quando se sabe exatamente quantas vezes o bloco deve ser executado.
+A estrutura `for` é usada quando se sabe previamente quantas vezes o código deve ser executado. Sua sintaxe permite inicializar variáveis, definir a condição de execução e o incremento, tudo em uma única linha.
+
+**Sintaxe**
+
+```
+for ([inicialização]; [condição]; [expressão final])
+  declaração
+```
+
+- **inicialização:** Uma expressão executada uma única vez, antes do início do loop. Costuma ser usada para declarar e iniciar a variável de controle.
+
+- **condição:** Avaliada antes de cada iteração. Se o resultado for `true`, o bloco será executado; se for `false`, o loop será encerrado.
+
+- **expressão final:** Executada ao fim de cada iteração. Normalmente usada para atualizar o valor da variável de controle.
+
+- **declaração:** O bloco de código a ser executado. Para incluir mais de uma instrução, deve-se usar chaves `{ ... }`.
+
+**Exemplo**
 
 ```
 for (let i = 0; i < 5; i++) {
@@ -21,7 +38,20 @@ for (let i = 0; i < 5; i++) {
 
 ## 5.2. while
 
-Executa o bloco enquanto a condição for verdadeira. A verificação é feita antes de cada execução.
+A estrutura `while` executa um bloco de código enquanto a condição especificada for verdadeira. A verificação ocorre antes da execução, ou seja, o bloco pode não ser executado nenhuma vez, caso a condição já seja falsa no início.
+
+**Sintaxe**
+
+```
+while (condição)
+  declaração
+```
+
+- **condição:** Avaliada antes de cada repetição. O loop continua enquanto a condição for verdadeira.
+
+- **declaração:** Código que será executado repetidamente. Se houver várias instruções, deve-se utilizar chaves `{ ... }`.
+
+**Exemplo**
 
 ```
 let i = 0;
@@ -38,7 +68,21 @@ while (i < 3) {
 
 ## 5.3. do...while
 
-Semelhante ao `while`, mas executa o bloco pelo menos uma vez, pois a condição é verificada depois da execução.
+A estrutura `do...while` é semelhante ao `while`, mas garante que o bloco de código será executado ao menos uma vez, pois a verificação da condição ocorre após a execução.
+
+**Sintaxe**
+
+```
+do {
+  declaração
+} while (condição);
+```
+
+- **declaração:** Código executado antes da verificação da condição.
+
+- **condição:** Avaliada após cada execução. Enquanto for verdadeira, o bloco continua a ser executado.
+
+**Exemplo**
 
 ```
 let i = 0;
@@ -54,7 +98,22 @@ do {
 
 ## 5.4. for...in
 
-Percorre as propriedades enumeráveis de um objeto. Ideal para objetos, não arrays.
+A estrutura `for...in` percorre todas as propriedades enumeráveis de um objeto. É ideal para iterar sobre objetos, mas não é recomendada para arrays, pois a ordem dos índices nem sempre é garantida.
+
+**Sintaxe**
+
+```
+for (variável in objeto)
+  declaração
+```
+
+- **variável:** Recebe o nome da chave (propriedade) a cada iteração.
+
+- **objeto:** Objeto cujas propriedades serão percorridas.
+
+- **declaração:** Bloco de código executado para cada chave encontrada.
+
+**Exemplo**
 
 ```
 const pessoa = { nome: "Ana", idade: 30 };
@@ -70,7 +129,22 @@ for (let chave in pessoa) {
 
 ## 5.5. for...of
 
-Percorre os valores de objetos iteráveis (arrays, strings, etc.). Ideal para arrays e coleções iteráveis.
+A estrutura `for...of` percorre os valores de objetos iteráveis, como arrays, strings, Map, Set e outros. É ideal para percorrer arrays de forma clara e direta.
+
+**Sintaxe**
+
+```
+for (variável of iterável)
+  declaração
+```
+
+- **variável:** Recebe, a cada iteração, o valor atual do item do iterável.
+
+- **iterável:** Objeto com suporte à iteração (como arrays e strings).
+
+- **declaração:** Código executado para cada item do iterável.
+
+**Exemplo**
 
 ```
 const frutas = ["maçã", "banana", "uva"];
@@ -87,7 +161,27 @@ for (let fruta of frutas) {
 
 ## 5.6. forEach
 
-Método de arrays para executar uma função para cada item. Não pode ser interrompido com `break` ou `continue`.
+O `forEach` é um método de arrays usado para executar uma função para cada item. É muito usado em situações em que se deseja aplicar uma função a todos os elementos de um array.
+
+> ⚠️ **Importante:** `forEach` **não pode ser interrompido** com `break` ou `continue`.
+
+**Sintaxe**
+
+```
+array.forEach(function(elemento, índice, array) {
+  declaração
+});
+```
+
+- **elemento:** O valor atual do array.
+
+- **índice (opcional):** A posição do elemento atual.
+
+- **array (opcional):** O próprio array sendo percorrido.
+
+- **declaração:** Código que será executado para cada elemento.
+
+**Exemplo**
 
 ```
 const numeros = [10, 20, 30];
