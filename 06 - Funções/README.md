@@ -80,3 +80,35 @@ const teste = function() {
   console.log('Função anônima')
 }
 ```
+
+## 6.3. Arrow Function (Função de Seta)
+
+As arrow functions foram introduzidas no ES6 e oferecem uma forma mais concisa de declarar funções. Elas utilizam o símbolo `=>` no lugar da palavra-chave `function` e não possuem seu próprio `this`, herdando o contexto léxico onde foram definidas.
+
+```
+const saudacao = (nome) => {
+  return `Olá, ${nome}`
+}
+```
+
+Essa sintaxe é especialmente útil para funções curtas, como callbacks e funções simples de transformação. Em expressões de linha única, onde a função retorna algo diretamente, as chaves `{}` e a palavra `return` podem ser omitidas:
+
+```
+const quadrado = x => x * x;
+console.log(quadrado(4)) // 16
+```
+
+**Regras e observações**
+
+- Se houver apenas um parâmetro, os parênteses podem ser omitidos.
+- Se nenhum parâmetro for passado, os parênteses são obrigatórios:
+
+```
+const ola = () => 'Olá!';
+```
+
+- Para retornar um objeto literal, é necessário envolvê-lo entre parênteses, evitando ambiguidade com o corpo da função:
+
+```
+const criarUsuario = () => ({ nome: 'Fulano', idade: 30 });
+```
