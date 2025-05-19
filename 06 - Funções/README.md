@@ -45,11 +45,38 @@ console.log(mensagem())
 
 A ordem dos parâmetros influencia diretamente o resultado da função. Por exemplo:
 
-````
+```
 function ola(nome, sobrenome) {
   console.log('Olá', nome, sobrenome)
 }
 
 ola('Fulano', 'Silva') // Olá Fulano Silva
 ola('Silva', 'Fulano') // Olá Silva Fulano
+```
+
+## 6.2. Função Anônima (Function Expression)
+
+Uma função anônima é uma função sem nome atribuída a uma variável. Essa abordagem é chamada de function expression, e sua principal característica é que a função só pode ser utilizada após sua definição, ao contrário da declaração de função tradicional, que pode ser chamada antes.
+
+```
+const saudacao = function(nome) {
+  return `Olá, ${nome}`
+}
+
+console.log(saudacao('Fulano')) // Olá, Fulano
+```
+
+A expressão `function(nome) {...}` representa uma função anônima, ou seja, uma função que não possui nome declarado. Nesse caso, ela é atribuída à variável `saudacao`, que passa a se comportar como uma função. Para utilizá-la, basta invocar o nome da variável seguido por parênteses.
+
+**Diferenças em relação à declaração de função**
+
+- Funções declaradas (function declaration) são elevadas pelo mecanismo de hoisting, ou seja, podem ser chamadas antes mesmo de sua definição no código.
+- Já as expressões de função (function expression), inclusive as funções anônimas atribuídas a variáveis, não são elevadas. Nesse caso, a função só pode ser utilizada após a linha em que foi definida:
+
+```
+teste() // Erro: Cannot access 'teste' before initialization
+
+const teste = function() {
+  console.log('Função anônima')
+}
 ```
