@@ -81,7 +81,7 @@ const teste = function() {
 }
 ```
 
-## 6.3. Arrow Function (Função de Seta)
+## 6.3. Função de Seta (Arrow Function)
 
 As arrow functions foram introduzidas no ES6 e oferecem uma forma mais concisa de declarar funções. Elas utilizam o símbolo `=>` no lugar da palavra-chave `function` e não possuem seu próprio `this`, herdando o contexto léxico onde foram definidas.
 
@@ -111,4 +111,22 @@ const ola = () => 'Olá!';
 
 ```
 const criarUsuario = () => ({ nome: 'Fulano', idade: 30 });
+```
+
+## Função Construtora (Functions constructor)
+
+Funções construtoras são usadas para criar múltiplos objetos com a mesma estrutura. Por convenção, seus nomes começam com letra maiúscula, e devem ser chamadas com a palavra-chave `new`.
+
+```
+function Pessoa(nome, idade) {
+  this.nome = nome;
+  this.idade = idade;
+}
+```
+
+Ao utilizar `new Pessoa(...)`, um novo objeto é criado, e o this dentro da função passa a se referir a esse novo objeto. Isso permite definir propriedades e comportamentos específicos para cada instância criada:
+
+```
+const pessoa1 = new Pessoa('Fulano', 25)
+console.log(pessoa1.nome) // Fulano
 ```
