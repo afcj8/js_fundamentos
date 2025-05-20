@@ -78,3 +78,50 @@ O método `toString()` também realiza essa conversão, mas utiliza vírgula com
 var nomes = ["Rocket", "Flash", "Bella", "Slugger"];
 nomes.toString(); // "Rocket,Flash,Bella,Slugger"
 ```
+
+## 7.4. Adicionando e Removendo Elementos
+
+Arrays permitem a adição e remoção de elementos tanto no início quanto no final da lista.
+
+**Final do array**
+
+- `push()`: adiciona um ou mais elementos ao final:
+
+```
+cidades.push("Cardiff", "Brighton");
+```
+
+- `pop()`: remove o último elemento:
+
+```
+var removeUltimo = cidades.pop();
+```
+
+**Início do array**
+
+- `unshift()`: adiciona elementos no início:
+
+```
+cidades.unshift("Edinburgh");
+```
+
+- `shift()`: remove o primeiro elemento:
+
+```
+var removePrimeiro = cidades.shift();
+```
+
+**Localizando e removendo elementos por índice**
+
+Para localizar o índice de um elemento específico, utiliza-se o método `indexOf()`:
+
+```
+var pos = listaDeFrutas.indexOf('Bananas'); // pos = 2
+```
+
+Para remover elementos com base no índice, utiliza-se o método `splice()`, onde o primeiro parâmetro é a posição inicial e o segundo, a quantidade de elementos a serem removidos:
+
+```
+listaDeFrutas.splice(pos, 1);
+// Remove 'Bananas'
+```
