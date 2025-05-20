@@ -113,7 +113,7 @@ const ola = () => 'Olá!';
 const criarUsuario = () => ({ nome: 'Fulano', idade: 30 });
 ```
 
-## Função Construtora (Functions constructor)
+## 6.4. Função Construtora (Functions constructor)
 
 Funções construtoras são usadas para criar múltiplos objetos com a mesma estrutura. Por convenção, seus nomes começam com letra maiúscula, e devem ser chamadas com a palavra-chave `new`.
 
@@ -130,3 +130,66 @@ Ao utilizar `new Pessoa(...)`, um novo objeto é criado, e o this dentro da fun�
 const pessoa1 = new Pessoa('Fulano', 25)
 console.log(pessoa1.nome) // Fulano
 ```
+
+## 6.5. Função Geradora (Generator Function)
+
+Funções geradoras são uma forma especial de função que podem pausar e retomar sua execução. Sua sintaxe se assemelha à de funções normais, com a diferença de que é necessário adicionar um asterisco (`*`) logo após a palavra-chave `function`:
+
+```
+function* ola(p1, p2) {}
+```
+
+Assim como nas funções tradicionais, os parênteses e chaves são obrigatórios. Os parâmetros continuam sendo opcionais e separados por vírgula.
+
+A principal característica das funções geradoras é o uso da palavra-chave `yield`, que define os pontos de pausa na execução da função. Cada vez que a função é chamada usando `.next()`, ela continua a partir do último `yield`.
+
+```
+function* ola() {
+    yield 'Olá'
+    yield 'Fulano'
+    yield 'Silva'
+}
+```
+
+Ao invocar uma função geradora, ela não executa imediatamente. Em vez disso, retorna um objeto do tipo Generator, que implementa o protocolo de iteração com o método `.next()`:
+
+```
+const nome = ola();
+
+const n1 = nome.next();
+console.log(n1); // { value: 'Olá', done: false }
+```
+
+Cada chamada a `.next()` retorna um objeto com duas propriedades:
+
+- `value`: o valor retornado pelo `yield`.
+- `done`: um booleano que indica se a função já terminou sua execução.
+
+Como a função `ola()` possui três `yield`, podemos chamá-la três vezes:
+
+```
+const nome = ola();
+
+console.log(nome.next()); // { value: 'Olá', done: false }
+console.log(nome.next()); // { value: 'Fulano', done: false }
+console.log(nome.next()); // { value: 'Silva', done: false }
+console.log(nome.next()); // { value: undefined, done: true }
+```
+
+Caso não precise controlar a execução manualmente, é possível percorrer todos os valores usando o `for...of`. Esse laço já lida com o `done` internamente:
+
+```
+function* ola() {
+  yield 'Olá';
+  yield 'Fulano';
+  yield 'Silva';
+}
+
+for (const n of ola()) {
+  console.log(n);
+}
+```
+
+O `for...of` percorre automaticamente todos os valores gerados até o fim da função, tornando o código mais simples e legível.
+
+As generator functions são úteis em situações que exigem controle sobre o fluxo da execução, como no caso de percorrer listas grandes sob demanda ou implementar iteradores personalizados.
