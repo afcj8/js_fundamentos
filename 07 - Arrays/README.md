@@ -125,3 +125,63 @@ Para remover elementos com base no índice, utiliza-se o método `splice()`, ond
 listaDeFrutas.splice(pos, 1);
 // Remove 'Bananas'
 ```
+
+## 7.5. Métodos de Manipulação
+
+A manipulação de arrays pode ser realizada de forma eficiente e legível por meio dos métodos `filter()`, `map()` e `reduce()`. Esses métodos pertencem ao paradigma da programação funcional e são amplamente utilizados para processar e transformar coleções de dados.
+
+Para os exemplos a seguir, será utilizado o seguinte array de objetos, que representa informações sobre algumas `empresas`:
+
+```
+const empresas = [
+  { nome: 'Samsung', valorDeMercado: 50, CEO: 'Kim Hyun Suk', anoDeCriacao: 1938 },
+  { nome: 'Facebook', valorDeMercado: 383, CEO: 'Mark Zuckerberg', anoDeCriacao: 2004 },
+  { nome: 'Spotify', valorDeMercado: 30, CEO: 'Daniel Ek', anoDeCriacao: 2006 },
+];
+```
+
+**`filter()`**
+
+O método `filter()` é utilizado para gerar um novo array contendo apenas os elementos que atendem a uma determinada condição. O array original permanece inalterado.
+
+**Exemplo:** Filtrar as empresas fundadas após o ano 2000.
+
+```
+const recentes = empresas.filter(empresa => empresa.anoDeCriacao > 2000);
+```
+
+O array `recentes` conterá apenas os objetos correspondentes às empresas criadas após o ano de 2000: `Facebook` e `Spotify`.
+
+**`map()`**
+
+O método `map()` é utilizado para transformar os elementos de um array, aplicando uma função a cada item e retornando um novo array com os valores resultantes. O array original também não é modificado.
+
+**Exemplo:** Gerar um array de strings contendo o nome da empresa e o nome de seu CEO.
+
+```
+const informacoes = empresas.map(empresa => `${empresa.nome} CEO: ${empresa.CEO}`);
+```
+
+**Resultado**
+
+```
+[
+  'Samsung CEO: Kim Hyun Suk',
+  'Facebook CEO: Mark Zuckerberg',
+  'Spotify CEO: Daniel Ek'
+]
+```
+
+**`reduce()`**
+
+O método `reduce()` permite reduzir um array a um único valor, por meio da aplicação de uma função que opera sobre um acumulador e cada elemento do array. Esse valor pode ser numérico, textual, booleano, entre outros.
+
+**Exemplo:** Calcular o valor total de mercado das empresas.:
+
+```
+const totalValorMercado = empresas.reduce((acumulador, empresa) => {
+  return acumulador + empresa.valorDeMercado;
+}, 0);
+```
+
+Nesse caso, `totalValorMercado` será igual a `463`, que corresponde à soma dos valores de mercado de todas as empresas.
