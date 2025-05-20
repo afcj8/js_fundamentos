@@ -25,6 +25,12 @@ Também é possível percorrer todos os elementos de um array utilizando estrutu
 listaDeFrutas.forEach(function (item, indice) {
   console.log(item, indice);
 });
+
+// Maçãs 0
+// Uvas 1
+// Bananas 2
+// Abacaxi 3
+// Morangos 4
 ```
 
 ## 7.2. Tamanho do Array
@@ -32,8 +38,43 @@ listaDeFrutas.forEach(function (item, indice) {
 O comprimento de um array pode ser obtido com a propriedade `.length`, da mesma forma que se obtém o número de caracteres de uma string:
 
 ```
-var array = [1, 1, 2, 3, 5, 8, 13];
-for (var i = 0; i < array.length; i++) {
-  console.log(array[i]);
+for (var i = 0; i < listaDeFrutas.length; i++) {
+  console.log(listaDeFrutas[i]);
 }
+
+// Maçãs
+// Uvas
+// Bananas
+// Abacaxi
+// Morangos
+```
+
+## 7.3. Conversão Entre Strings e Arrays
+
+Em algumas situações, pode ser necessário converter uma string em um array, ou vice-versa.
+
+**De string para array: `split()`**
+
+O método `split()` separa uma string em partes, de acordo com um delimitador, no exemplo a seguir o delimitador utilizado é a vírgula:
+
+```
+var cidades = "Manchester,London,Liverpool,Birmingham,Leeds,Carlisle";
+var separacao = cidades.split(",");
+// ['Manchester', 'London', 'Liverpool', 'Birmingham', 'Leeds', 'Carlisle']
+```
+
+**De array para string: `join()` e `toString()`**
+
+O método `join()` junta os elementos de um array em uma string, podendo especificar o separador:
+
+```
+var novaString = separacao.join(",");
+// "Manchester,London,Liverpool,Birmingham,Leeds,Carlisle"
+```
+
+O método `toString()` também realiza essa conversão, mas utiliza vírgula como separador padrão e não aceita parâmetros:
+
+```
+var nomes = ["Rocket", "Flash", "Bella", "Slugger"];
+nomes.toString(); // "Rocket,Flash,Bella,Slugger"
 ```
